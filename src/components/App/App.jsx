@@ -8,16 +8,20 @@ import { PrivateRoute } from '../PrivateRoute';
 import { RestrictedRoute } from '../RestrictedRoute';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
-const RegisterPage = lazy(() => import('../../pages/RegisterPage/RegisterPage'));
+const RegisterPage = lazy(() =>
+  import('../../pages/RegisterPage/RegisterPage')
+);
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage'));
-const ContactsPage = lazy(() => import('../../pages/ContactsPage/ContactsPage'));
+const ContactsPage = lazy(() =>
+  import('../../pages/ContactsPage/ContactsPage')
+);
 
 export function App() {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(refreshUser())
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
@@ -25,7 +29,6 @@ export function App() {
   ) : (
     <Routes>
       <Route path="/" element={<AppBar />}>
-        {/* <Route index element={<HomePage />} /> */}
         <Route
           index
           element={
@@ -54,4 +57,4 @@ export function App() {
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
-};
+}

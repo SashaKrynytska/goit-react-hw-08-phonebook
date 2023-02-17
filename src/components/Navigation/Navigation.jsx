@@ -1,11 +1,11 @@
-import { useAuth } from "hooks/useAuth";
+import { useAuth } from 'hooks/useAuth';
 
 import { StyledNavLink, NavList } from 'components/App/App.styled';
 
 import PropTypes from 'prop-types';
 
 export const Navigation = () => {
-const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
   return (
     <>
       <nav>
@@ -21,8 +21,7 @@ const { isLoggedIn } = useAuth();
       </nav>
     </>
   );
-
-};        
+};
 
 Navigation.propTypes = {
   isLoggedIn: PropTypes.bool,
