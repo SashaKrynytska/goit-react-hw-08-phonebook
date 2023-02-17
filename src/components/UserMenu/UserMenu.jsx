@@ -1,26 +1,20 @@
-import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/auth/operations';
+import { logOut } from 'redux/auth/authOperation';
 import { useAuth } from 'hooks/useAuth';
 
-export const UserMenu = () => {
-  const { user } = useAuth();
-  const dispatch = useDispatch();
+import { Wrapper } from 'components/App/App.styled';
+import { Button } from 'components/Button/Button';
 
-  const onLogOut = () => dispatch(logOut());
+export const UserMenu = () => {
+  const dispatch = useDispatch();
+  const { user } = useAuth();
+
+ const handleLogOut = () => dispatch(logOut());
 
   return (
-    <>
-      <NavLink to="contacts">Contacts</NavLink>
-      <div>
-        <p>
-          Welcome,<span>{user.name}</span>
-        </p>
-
-        <button type="button" onClick={onLogOut}>
-          Logout
-        </button>
-      </div>
-    </>
+    <Wrapper>
+      <p> Welcome, {user.name} !</p>
+      <Button type={'button'} title={'Logout'} onClick={handleLogOut} />
+    </Wrapper>
   );
 };
