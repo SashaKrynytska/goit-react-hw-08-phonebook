@@ -68,8 +68,6 @@ export const Box = styled.div`
   margin: 20px auto;
   padding: 20px;
   max-width: 360px;
-
-  background-color: rgba(135, 207, 235, 0.3);
   border-radius: 8px;
 `;
 
@@ -83,8 +81,6 @@ export const Box2 = styled.div`
 
   color: white;
   font-size: 16px;
-
-  // background-color: rgba(135, 207, 235, 0.2);
   border-radius: 8px;
 
   & h1,

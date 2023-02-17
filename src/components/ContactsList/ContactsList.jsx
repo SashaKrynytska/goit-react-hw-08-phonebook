@@ -15,11 +15,11 @@ const ContactsList = () => {
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizeFilter)
     );
-  };
+  }
 
   return (
     <>
-      <List >
+      <List>
         {filtredContacts.map(({ id, name, number }) => (
           <ContactsItem key={id} contact={{ id, name, number }} />
         ))}
