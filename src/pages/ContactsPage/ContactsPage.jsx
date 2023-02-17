@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Section, Container, Box } from 'components/App/App.styled'; 
+import { Section, Container, Box } from 'components/App/App.styled';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
 import ContactsList from 'components/ContactsList/ContactsList';
 import { getContacts } from 'redux/contacts/contactsOperations';
+import Loader from 'components/Loader/Loader';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const ContactsPage = () => {
           <Box>
             <h2>Your contacts</h2>
             <Filter />
+            {!isShow && <Loader />}
             <ContactsList />
           </Box>
         )}
