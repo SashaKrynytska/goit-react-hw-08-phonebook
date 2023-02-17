@@ -16,6 +16,7 @@ export function Contacts() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
   return (
     <>
       <h1>Phonebook</h1>
