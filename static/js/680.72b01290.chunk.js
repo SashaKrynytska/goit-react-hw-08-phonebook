@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[680],{680:function(e,o,n){n.r(o);var h=n(4169),c=n(184);o.default=function(){return(0,c.jsx)(h.$0,{children:(0,c.jsx)(h.W2,{children:(0,c.jsxs)(h.TU,{children:[(0,c.jsx)("h1",{children:"PhoneBook"}),(0,c.jsx)("p",{children:"This app created to help you remember main contacts. You can throw away big old phone books!"})]})})})}}}]);
+//# sourceMappingURL=680.72b01290.chunk.js.map
